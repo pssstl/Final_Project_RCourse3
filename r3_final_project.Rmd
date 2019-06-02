@@ -237,6 +237,8 @@ plots <- tsc_split %>%
 paths <- paste0("gender", names(plots), ".png")
 
 walk2(paths, plots, ggsave)
+
+plots
 ```
 So now we have histograms that show the distribution of Trauma Symptom Checklist scores for each of five gender categories. Again, we were spared some repetition...What if we wanted to get descriptive statistics for each of these groups? Nesting provides one avenue of doing this. This creates a data frame with a list column, which is an alternative to using the split() function we used above. 
 ```{r}
